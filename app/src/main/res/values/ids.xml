@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="current_score" type="id" />
+    <item name="score_timer_buffer" type="id" />
+    <item name="timer" type="id" />
+    <item name="timer_board_buffer" type="id" />
+    <item name="board_left_buffer" type="id" />
+    <item name="board_grid" type="id" />
+    <item name="board_right_buffer" type="id" />
+</resources>

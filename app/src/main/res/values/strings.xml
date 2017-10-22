@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Matchy Game</string>
+    <string name="button_start">Play!</string>
 </resources>

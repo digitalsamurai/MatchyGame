@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="80dp"
+    android:layout_marginTop="80dp"
+    android:orientation="vertical"
+    tools:context="com.digitalsamuraigames.matchygame.GameActivity">
+
+    <TextView
+        android:id="@id/current_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/score_timer_buffer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@id/score_timer_buffer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_score"
+        app:layout_constraintBottom_toTopOf="@+id/timer"/>
+
+    <ProgressBar
+        android:id="@id/timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:progress="10"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/timer_board_buffer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_timer_buffer" />
+
+    <Space
+        android:id="@id/timer_board_buffer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        app:layout_constraintBottom_toTopOf="@+id/board_grid" />
+
+    <Space
+        android:id="@id/board_left_buffer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/board_grid" />
+
+    <com.digitalsamuraigames.matchygame.GameBoard
+        android:id="@id/board_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/board_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintLeft_toRightOf="@+id/board_left_buffer"
+        app:layout_constraintRight_toLeftOf="@+id/board_right_buffer" />
+
+    <Space
+        android:id="@id/board_right_buffer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/board_grid"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
